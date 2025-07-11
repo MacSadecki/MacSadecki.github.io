@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <button id="open-sidebar-button" onclick="openSidebar()">
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="Open sidebar" aria-expanded="false" aria-controls="navbar">
         <span class="material-symbols-rounded">menu</span>
     </button>
 
@@ -21,17 +21,20 @@
     <nav id="navbar">
         <ul>
             <li>
-                <button id="close-sidebar-button" onclick="closeSidebar()">
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="Close sidebar">
                     <span class="material-symbols-rounded">close</span>
                 </button>
             </li>
-            <li class="home-li"><a class="active-link" href="index.html">Home</a></li>            
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Home</a></li>            
             <li><a href="about.html">About</a></li>
             <li><a href="unity.html">UnityProjects</a></li>
             <li><a href="web.html">Web</a></li>
             <li><a class="accent-link" href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
 <main>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>

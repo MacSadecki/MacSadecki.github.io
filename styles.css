@@ -69,7 +69,13 @@ nav a.accent-link{
     padding: 1em;
     cursor: pointer;
 }
-
+#overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
 @media screen and (max-width: 700px){
     #open-sidebar-button, #close-sidebar-button{
         display: block;
@@ -86,6 +92,9 @@ nav a.accent-link{
     }
     nav.show{
         right: 0;
+    }
+    nav.show ~ #overlay{
+        display: block;        
     }
     nav ul{
         width: 100%;
